@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Strings</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Отримуємо три рядки від користувача
+            const str1 = prompt("Введіть перший рядок:");
+            const str2 = prompt("Введіть другий рядок:");
+            const str3 = prompt("Введіть третій рядок:");
+
+            // Зберігаємо рядки в масиві
+            const strings = [str1, str2, str3];
+
+            // Перемішуємо масив у довільному порядку
+            strings.sort(() => Math.random() - 0.5);
+
+            // Виводимо рядки у довільному порядку однією командою
+            console.log(`Результат: ${strings.join(", ")}`);
+        });
+    </script>
+</head>
+<body>
+    <h1>Отримання рядків від користувача</h1>
+    <p>Відкрийте консоль і виконайте дії.</p>
+</body>
+</html>
