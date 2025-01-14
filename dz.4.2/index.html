@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перевірка цифр числа</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Запитуємо тризначне число у користувача
+            const inputNumber = prompt("Введіть тризначне число:");
+
+            // Перевіряємо, чи введено коректне тризначне число
+            if (/^\d{3}$/.test(inputNumber)) {
+                const digits = inputNumber.split(""); // Розбиваємо число на масив цифр
+
+                // Перевірка: чи всі цифри однакові
+                const allSame = digits.every(digit => digit === digits[0]);
+
+                // Перевірка: чи є серед цифр однакові
+                const hasDuplicates = new Set(digits).size < digits.length;
+
+                // Виводимо результати
+                alert(`Усі цифри однакові: ${allSame}`);
+                alert(`Є однакові цифри: ${hasDuplicates}`);
+            } else {
+                alert("Будь ласка, введіть коректне тризначне число.");
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>Перевірка цифр числа</h1>
+    <p>Скрипт перевірить, чи всі цифри однакові або чи є серед них однакові.</p>
+</body>
+</html>
