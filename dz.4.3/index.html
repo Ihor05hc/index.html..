@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інформація про користувача</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Запитуємо дані у користувача
+            const birthYear = prompt("Введіть ваш рік народження:");
+            const city = prompt("В якому місті ви живете?");
+            const sport = prompt("Ваш улюблений вид спорту?");
+
+            // Обчислюємо вік
+            const currentYear = new Date().getFullYear();
+            const age = currentYear - birthYear;
+
+            // Формуємо повідомлення про місто
+            let cityMessage;
+            switch (city.toLowerCase()) {
+                case "київ":
+                    cityMessage = "Ти живеш у столиці України.";
+                    break;
+                case "вашингтон":
+                    cityMessage = "Ти живеш у столиці США.";
+                    break;
+                case "лондон":
+                    cityMessage = "Ти живеш у столиці Великої Британії.";
+                    break;
+                default:
+                    cityMessage = `Ти живеш у місті ${city}.`;
+                    break;
+            }
+
+            // Формуємо повідомлення про спорт
+            let sportMessage;
+            if (sport) {
+                sportMessage = `Круто! Хочеш стати як ${
+                    sport.toLowerCase() === "футбол" ? "Ліонель Мессі" :
+                    sport.toLowerCase() === "бокс" ? "Майк Тайсон" :
+                    sport.toLowerCase() === "баскетбол" ? "Майкл Джордан" :
+                    "видатний спортсмен"
+                }?`;
+            } else {
+                sportMessage = "Шкода, що ви не вказали ваш улюблений спорт.";
+            }
+
+            // Виводимо повідомлення
+            alert(`Ваш вік: ${age}\n${cityMessage}\n${sportMessage}`);
+        });
+    </script>
+</head>
+<body>
+    <h1>Інформація про користувача</h1>
+    <p>Скрипт запитає у вас декілька даних та відобразить відповідну інформацію.</p>
+</body>
+</html>
