@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const dataTypes = [
+                42, // number
+                "Hello, world!", // string
+                true, // boolean
+                null, // null
+                undefined, // undefined
+                Symbol("symbol"), // symbol
+                BigInt(12345678901234567890n), // bigint
+                {}, // object
+                [], // array (object subtype)
+                function() {}, // function (object subtype)
+            ];
+
+            console.log("Типи даних:");
+            dataTypes.forEach(value => {
+                console.log(`${value} (${typeof value})`);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Консольний лог типів даних</h1>
+    <p>Відкрийте консоль браузера, щоб переглянути типи даних.</p>
+</body>
+</html>
