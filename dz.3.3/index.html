@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розкласти число на цифри</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Отримуємо п'ятизначне число від користувача
+            const inputNumber = prompt("Введіть п'ятизначне число (наприклад, 10369):");
+            
+            // Перевірка на валідність введення
+            if (/^\d{5}$/.test(inputNumber)) {
+                // Розкладаємо число на цифри та виводимо через пробіл
+                console.log(`Результат: ${inputNumber.split("").join(" ")}`);
+            } else {
+                console.log("Будь ласка, введіть коректне п'ятизначне число.");
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>Розкласти п'ятизначне число на цифри</h1>
+    <p>Відкрийте консоль браузера для перегляду результату.</p>
+</body>
+</html>
