@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case Example</title>
+    # Курс долара
+exchange_rate = 26
+
+# Виводимо вартість для сум від 10 до 100 доларів
+print("Долари  ->  Гривні")
+for dollars in range(10, 101, 10):  # Суми: 10, 20, 30 ... 100
+    uah = dollars * exchange_rate  # Розрахунок у гривнях
+    print(f"{dollars:>6}  ->  {uah:>6}")  # Форматоване виведення
