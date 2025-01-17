@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case Example</title>
+# Визначаємо початок, кінець і крок
+start = 20
+end = 30
+step = 0.5
+
+# Використовуємо range для ітерацій, перетворивши числа на цілі для роботи з дробовими кроками
+# Кожне число множимо на 2 (1/step)
+for i in range(int(start * 2), int(end * 2) + 1):  # Додаємо 1 до кінця, щоб включити останнє число
+    print(i / 2, end=" ")  # Ділимо кожен елемент на 2 для відновлення початкового значення
