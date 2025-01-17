@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case Example</title>
+    # Запитуємо ціле число N у користувача
+N = int(input("Введіть ціле число N: "))
+
+# Перевіряємо всі числа від 1 до 100
+print("Числа, квадрат яких не перевищує", N, ":")
+for i in range(1, 101):
+    if i ** 2 <= N:
+        print(i, end=" ")
+    else:
+        break  # Якщо квадрат числа перевищує N, завершуємо цикл
+
+        Введіть ціле число N: 50
+Числа, квадрат яких не перевищує 50 :
+1 2 3 4 5 6 7
