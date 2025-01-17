@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case Example</title>
+
+    # Запитуємо ціле число у користувача
+number = int(input("Введіть ціле число: "))
+
+# Функція для перевірки, чи є число простим
+def is_prime(n):
+    if n <= 1:
+        return False  # Просте число має бути більше 1
+    for i in range(2, int(n**0.5) + 1):  # Перевіряємо дільники до √n
+        if n % i == 0:
+            return False
+    return True
+
+# Перевіряємо і виводимо результат
+if is_prime(number):
+    print(f"Число {number} є простим.")
+else:
+    print(f"Число {number} не є простим.")
