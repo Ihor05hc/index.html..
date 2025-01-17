@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case Example</title>
+
+    # Функція для видалення символів із рядка
+def remove_characters(input_string, chars_to_remove):
+    # Проходимо по кожному символу в рядку та залишаємо тільки ті, які не в списку для видалення
+    return ''.join(char for char in input_string if char not in chars_to_remove)
+
+# Запитуємо вхідний рядок
+input_string = input("Введіть рядок: ")
+
+# Запитуємо символи для видалення, вводячи їх через пробіл
+chars_to_remove = input("Введіть символи для видалення (через пробіл): ").split()
+
+# Викликаємо функцію та виводимо результат
+result = remove_characters(input_string, chars_to_remove)
+print("Результат:", result)
