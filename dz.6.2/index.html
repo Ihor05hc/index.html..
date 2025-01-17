@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case Example</title>
+
+    # Функція для обчислення середнього арифметичного числових елементів
+def average_of_numbers(data):
+    # Фільтруємо тільки числові елементи з масиву
+    numeric_elements = [x for x in data if isinstance(x, (int, float))]
+    # Якщо числових елементів немає, повертаємо None або 0 (залежно від потреб)
+    if not numeric_elements:
+        return None  # Можна змінити на 0, якщо потрібно повернути число
+    # Обчислюємо середнє арифметичне
+    return sum(numeric_elements) / len(numeric_elements)
+
+# Приклад використання
+array = [1, "hello", 2.5, True, None, 10, "world", 3]
+
+result = average_of_numbers(array)
+if result is not None:
+    print("Середнє арифметичне числових елементів:", result)
+else:
+    print("У масиві немає числових елементів.")
